@@ -30,5 +30,4 @@ buildNumber.properties
 #
 # Grafo
 #
-grafo.csv
-grafo.txt
+grafo*?

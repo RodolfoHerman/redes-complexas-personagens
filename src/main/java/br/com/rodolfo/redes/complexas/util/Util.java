@@ -45,6 +45,18 @@ public class Util {
 
     }
 
+    public static List<String> normalizarNomesPersonagens(List<String> personagens) {
+        
+        List<String> novosNomes = new ArrayList<>();
+
+        for (String personagem : personagens) {
+            
+            novosNomes.add(personagem.replace(" ", "-"));
+        }
+
+        return novosNomes;
+    }
+
     public static List<String> converterGrafoParaPython(int[][] grafo, List<String> personagens) {
         
         int dimensao = grafo[0].length;

@@ -24,6 +24,15 @@ public interface ArquivoService {
     void salvarArquivoGrafoPython(String caminho, List<String> edges);
 
     /**
+     * Criar o arquivo xml para o programa GEPHI (formato .gexf)
+     * 
+     * @param caminho
+     * @param edges
+     * @param listaPersonagens
+     */
+    void salvarArquivoGephi(String caminho, List<String> edges, List<String> listaPersonagens);
+
+    /**
      * Retorna o script do filme em uma lista de strings
      * 
      * @param caminho
@@ -46,6 +55,6 @@ public interface ArquivoService {
      * @param caminho_2
      * @return List<String>
      */
-    List<String> buscarListaPersonagensSemApelido(String caminho_1, String caminho_2);
+    List<String> buscarConteudoScriptSemApelido(String caminho_1, String caminho_2);
 
 }

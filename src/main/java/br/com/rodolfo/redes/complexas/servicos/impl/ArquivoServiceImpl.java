@@ -69,6 +69,71 @@ public class ArquivoServiceImpl implements ArquivoService {
     }
 
     @Override
+    public void salvarArquivoGephi(String caminho, List<String> edges, List<String> listaPersonagens) {
+
+        log.info("Slavando o grafo para GEPHI no caminho : {}", caminho);
+
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(caminho))){
+
+            StringBuilder arquivoGephi = new StringBuilder();
+            Double contador = 0.0;
+            
+            arquivoGephi.append("<?xml version='1.0' encoding='UTF-8'?>").append("\n")
+                .append("<gexf xmlns:viz='http:///www.gexf.net/1.1draft/viz' version='1.1' xmlns='http://www.gexf.net/1.1draft'>").append("\n")
+                .append("<meta lastmodifieddate='2018-10-12+23:44'>").append("\n")
+                .append("<creator>Herman</creator>").append("\n")
+                .append("</meta>").append("\n")
+                .append("<graph defaultedgetype='undirected' idtype='string' type='static'>").append("\n")
+                .append("<nodes count='").append(listaPersonagens.size()).append("'>").append("\n");
+
+            for (String personagem : listaPersonagens) {
+                
+                arquivoGephi.append("<node id='")
+                            .append(personagem)
+                            .append("' label='")
+                            .append(personagem)
+                            .append("'/>")
+                            .append("\n");
+            }
+
+            arquivoGephi.append("</nodes>").append("\n")
+                        .append("<edges count='").append(edges.size()).append("'>").append("\n");
+            
+            for (String edge : edges) {
+                
+                String[] aux = edge.split(",");
+
+                arquivoGephi.append("<edge id='")
+                            .append(contador)
+                            .append("' source='")
+                            .append(aux[0])
+                            .append("' target='")
+                            .append(aux[1])
+                            .append("' weight='")
+                            .append(aux[2])
+                            .append("'/>")
+                            .append("\n");
+
+                contador++;
+            }
+
+            arquivoGephi.append("</edges>")
+                        .append("\n")
+                        .append("</graph>")
+                        .append("</gexf>");
+
+
+            escritor.write(arquivoGephi.toString());
+            escritor.flush();
+
+        } catch (Exception e) {
+            
+            log.error("Erro : {}", e.getMessage());
+        }
+
+    }
+
+    @Override
     public List<String> buscarConteudoScript(String caminho) {
         
         log.info("Buscando script do filme no caminho : {}", caminho);
@@ -120,8 +185,47 @@ public class ArquivoServiceImpl implements ArquivoService {
     }
 
     @Override
-    public List<String> buscarListaPersonagensSemApelido(String caminho_1, String caminho_2) {
-		return null;
-	}
+    public List<String> buscarConteudoScriptSemApelido(String caminho_1, String caminho_2) {
+        
+        log.info("Buscando script do filme no caminho : {}, arquivo substituir apelidos no caminho : {}", caminho_1, caminho_2);
+        
+        List<String> script = new ArrayList<>();
+        List<String[]> substituicao = new ArrayList<>();
+        
+        try(BufferedReader leitor = new BufferedReader(new FileReader(caminho_2))) {
+            
+            String leitura;
+            
+            while((leitura= leitor.readLine()) != null) {
+                
+                substituicao.add(leitura.split("~"));
+            }
+            
+        } catch (Exception e) {
+            
+            log.error("Erro : {}", e.getMessage());
+        }
+        
+        try (BufferedReader leitor = new BufferedReader(new FileReader(caminho_1))){
+
+            String leitura;
+
+            while((leitura = leitor.readLine()) != null ) {
+
+                for(String[] termos : substituicao) {
+                
+                    leitura = leitura.replaceAll("(?i)" + termos[0], termos[1]);
+                }
+                
+                script.add(leitura);
+            }
+
+        } catch (Exception e) {
+            
+            log.error("Erro : {}", e.getMessage());
+        }
+        
+        return script;
+    }
     
 }

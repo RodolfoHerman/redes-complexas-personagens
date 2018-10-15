@@ -7,9 +7,11 @@ public class Configuracoes {
 
     private String arquivoSalvarGrafoPython;
     private String arquivoSalvarGrafo;
+    private String arquivoSalvarGephi;
     private String arquivoScript;
     private String arquivoPersonagens;
     private String arquivoApelidos;
+    private boolean utilizarArquivoApelidos;
 
     public Configuracoes() {}
 
@@ -25,6 +27,14 @@ public class Configuracoes {
      */
     public void setArquivoSalvarGrafo(String arquivoSalvarGrafo) {
         this.arquivoSalvarGrafo = arquivoSalvarGrafo;
+    }
+
+    public String getArquivoSalvarGephi() {
+        return this.arquivoSalvarGephi;
+    }
+
+    public void setArquivoSalvarGephi(String arquivoSalvarGephi) {
+        this.arquivoSalvarGephi = arquivoSalvarGephi;
     }
 
     /**
@@ -82,6 +92,14 @@ public class Configuracoes {
      */
     public void setArquivoSalvarGrafoPython(String arquivoSalvarGrafoPython) {
         this.arquivoSalvarGrafoPython = arquivoSalvarGrafoPython;
+    }
+    
+    public boolean isUtilizarArquivoApelidos() {
+        return utilizarArquivoApelidos;
+    }
+
+    public void setUtilizarArquivoApelidos(boolean utilizarArquivoApelidos) {
+        this.utilizarArquivoApelidos = utilizarArquivoApelidos;
     }
 
 }

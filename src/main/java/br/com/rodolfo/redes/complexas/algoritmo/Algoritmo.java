@@ -41,7 +41,7 @@ public class Algoritmo {
             if(palavraChave(scriptTrecho)) {
 
                 Set<String> aux = new HashSet<>();
-                scriptTrecho = script.get(++contador);
+                scriptTrecho = script.get(contador);
 
                 do {
                     
@@ -52,10 +52,10 @@ public class Algoritmo {
 
                 cenas.add(new Cena(numCena, new ArrayList<>(aux)));
                 numCena++;
-                contador--;
+                //contador--;
+                x = contador;
             }
-
-            x = contador;
+            
         }
     }
 
