@@ -2,6 +2,7 @@ package br.com.rodolfo.redes.complexas.servicos.impl;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -22,14 +23,15 @@ import br.com.rodolfo.redes.complexas.servicos.ArquivoService;
 public class ArquivoServiceImpl implements ArquivoService {
 
     private static final Logger log = LoggerFactory.getLogger(ArquivoServiceImpl.class);
+    private static final File raiz = new File("");
     
     @Override
     public void salvarArquivoGrafo(String caminho, int[][] grafo) {
 
         log.info("Slavando o grafo no caminho : {}", caminho);
 
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(caminho))){
-            
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(raiz.getAbsolutePath().concat(caminho)))){
+
             int dimensao = grafo[0].length;
 
             for(int x = 0; x < dimensao; x++) {
@@ -45,6 +47,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
     }
 
@@ -53,7 +56,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
         log.info("Slavando o grafo para python no caminho : {}", caminho);
 
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(caminho))){
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(raiz.getAbsolutePath().concat(caminho)))){
 
             for (String edge : edges) {
                 
@@ -66,6 +69,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
     }
 
@@ -74,7 +78,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
         log.info("Slavando o grafo para GEPHI no caminho : {}", caminho);
 
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(caminho))){
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(raiz.getAbsolutePath().concat(caminho)))){
 
             StringBuilder arquivoGephi = new StringBuilder();
             Double contador = 0.0;
@@ -130,6 +134,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
 
     }
@@ -141,7 +146,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         
         List<String> script = new ArrayList<>();
 
-        try (BufferedReader leitor = new BufferedReader(new FileReader(caminho))){
+        try (BufferedReader leitor = new BufferedReader(new FileReader(raiz.getAbsolutePath().concat(caminho)))){
 
             String leitura;
 
@@ -153,6 +158,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
         
         return script;
@@ -164,9 +170,9 @@ public class ArquivoServiceImpl implements ArquivoService {
         log.info("Buscando a lista de personagens do filme no caminho : {}", caminho);
         
         Set<String> personagens = new HashSet<>();
-
-        try (BufferedReader leitor = new BufferedReader(new FileReader(caminho))){
-
+        
+        try (BufferedReader leitor = new BufferedReader(new FileReader(raiz.getAbsolutePath().concat(caminho)))){
+            
             String leitura;
 
             while((leitura = leitor.readLine()) != null ) {
@@ -177,6 +183,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
 
         List<String> ordenada = new ArrayList<>(personagens);
@@ -193,7 +200,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         List<String> script = new ArrayList<>();
         List<String[]> substituicao = new ArrayList<>();
         
-        try(BufferedReader leitor = new BufferedReader(new FileReader(caminho_2))) {
+        try(BufferedReader leitor = new BufferedReader(new FileReader(raiz.getAbsolutePath().concat(caminho_2)))) {
             
             String leitura;
             
@@ -210,9 +217,10 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
         
-        try (BufferedReader leitor = new BufferedReader(new FileReader(caminho_1))){
+        try (BufferedReader leitor = new BufferedReader(new FileReader(raiz.getAbsolutePath().concat(caminho_1)))){
 
             String leitura;
 
@@ -229,6 +237,7 @@ public class ArquivoServiceImpl implements ArquivoService {
         } catch (Exception e) {
             
             log.error("Erro : {}", e.getMessage());
+            System.exit(1);
         }
         
         return script;
