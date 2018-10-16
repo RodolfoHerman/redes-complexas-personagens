@@ -3,3 +3,6 @@ Underhill~Frodo
 Meriadoc~Merry
 Peregrin~Pippin
 Strider~Aragorn
+Rosie Cotton~Rosie-Cotton
+King of the dead~King-of-the-dead
+Rohan soldier~Rohan-soldier

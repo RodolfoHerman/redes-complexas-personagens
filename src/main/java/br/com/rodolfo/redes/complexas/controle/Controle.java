@@ -44,6 +44,7 @@ public class Controle {
             this.configuracoes.setArquivoScript(prop.getProperty("arquivo.script"));
             this.configuracoes.setArquivoApelidos(prop.getProperty("arquivo.apelidos"));
             this.configuracoes.setUtilizarArquivoApelidos(new Boolean(prop.getProperty("utilizar.arquivo.apelidos")));
+            this.configuracoes.setFalasPersonagem(new Boolean(prop.getProperty("utilizar.falas.script")));
 
         } catch (Exception e) {
             
@@ -58,16 +59,21 @@ public class Controle {
         
         if(configuracoes.isUtilizarArquivoApelidos()) {
             
-            script = arquivoService.buscarConteudoScriptSemApelido(configuracoes.getArquivoScript(), configuracoes.getArquivoApelidos());
+            script = arquivoService.buscarConteudoScriptSemApelido(
+                configuracoes.getArquivoScript(), 
+                configuracoes.getArquivoApelidos()
+            );
             
         } else {
             
-            script = arquivoService.buscarConteudoScript(configuracoes.getArquivoScript());
+            script = arquivoService.buscarConteudoScript(
+                configuracoes.getArquivoScript()
+            );
         }
         
         log.info("Executando algoritmo.");
 
-        algoritmo = new Algoritmo(script, personagens);
+        algoritmo = new Algoritmo(script, personagens, configuracoes.getFalasPersonagem());
         algoritmo.realizarParse();
         //algoritmo.extrairGrafo();
     }

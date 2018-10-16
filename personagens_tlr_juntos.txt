@@ -13,7 +13,7 @@ Celeborn
 Bilbo
 Frodo
 Witchking
-Rosie Cotton
+Rosie-Cotton
 Gothmog
 Madril
 Isildur
@@ -28,7 +28,7 @@ Treebeard
 Grishnákh
 Uruk-hai
 Maúhur
-King of the dead
+King-of-the-dead
 Saruman
 Merry
 Wormtongue
@@ -48,4 +48,4 @@ Théodred
 Witch-king
 Sharku
 Aldor
-Rohan soldier
+Rohan-soldier

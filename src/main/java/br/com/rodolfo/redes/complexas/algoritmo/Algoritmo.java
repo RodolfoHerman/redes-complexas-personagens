@@ -18,12 +18,14 @@ public class Algoritmo {
     private final List<String> script;
     private final List<String> personagens;
     private final List<Cena> cenas;
+    private final boolean falasPersongam;
     private int[][] grafoFinal;
 
-    public Algoritmo(List<String> script, List<String> personagens) {
+    public Algoritmo(List<String> script, List<String> personagens, boolean falasPersongam) {
 
         this.script = script;
         this.personagens = personagens;
+        this.falasPersongam = falasPersongam;
         this.cenas = new ArrayList<>();
     }
 
@@ -44,7 +46,20 @@ public class Algoritmo {
 
                 do {
                     
-                    aux.addAll(extrairPersonagens(scriptTrecho));
+                    if(falasPersongam) {
+
+                        aux.addAll(extrairPersonagens(scriptTrecho));
+
+                    } else {
+
+                        String[] trecho = scriptTrecho.split(" ");
+
+                        if(trecho.length <= 3) {
+
+                            aux.addAll(extrairPersonagens(scriptTrecho));
+                        }
+                    }
+
                     scriptTrecho = script.get(++contador);
 
                 } while (contador < (script.size()-1) && !palavraChave(scriptTrecho));

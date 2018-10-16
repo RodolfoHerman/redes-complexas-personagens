@@ -12,6 +12,7 @@ public class Configuracoes {
     private String arquivoPersonagens;
     private String arquivoApelidos;
     private boolean utilizarArquivoApelidos;
+    private boolean falasPersonagem;
 
     public Configuracoes() {}
 
@@ -100,6 +101,14 @@ public class Configuracoes {
 
     public void setUtilizarArquivoApelidos(boolean utilizarArquivoApelidos) {
         this.utilizarArquivoApelidos = utilizarArquivoApelidos;
+    }
+
+    public boolean getFalasPersonagem() {
+        return this.falasPersonagem;
+    }
+
+    public void setFalasPersonagem(boolean falasPersonagem) {
+        this.falasPersonagem = falasPersonagem;
     }
 
 }
