@@ -15,6 +15,7 @@ public final class App {
         
         Controle controle = new Controle();
         controle.executar();
+        controle.salvarArquivos();
 
     }
 }

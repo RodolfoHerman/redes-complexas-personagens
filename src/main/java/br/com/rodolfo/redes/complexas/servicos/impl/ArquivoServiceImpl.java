@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -146,7 +147,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
             while((leitura = leitor.readLine()) != null ) {
 
-                script.add(leitura);
+                script.add(StringUtils.stripAccents(leitura));
             }
 
         } catch (Exception e) {
@@ -170,7 +171,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
             while((leitura = leitor.readLine()) != null ) {
 
-                personagens.add(leitura.trim().toLowerCase());
+                personagens.add(StringUtils.stripAccents(leitura.trim().toLowerCase()));
             }
 
         } catch (Exception e) {
@@ -198,7 +199,12 @@ public class ArquivoServiceImpl implements ArquivoService {
             
             while((leitura= leitor.readLine()) != null) {
                 
-                substituicao.add(leitura.split("~"));
+                String[] aux = leitura.split("~");
+
+                substituicao.add(new String[]{
+                    StringUtils.stripAccents(aux[0].toLowerCase()),
+                    StringUtils.stripAccents(aux[1].toLowerCase())
+                });
             }
             
         } catch (Exception e) {
@@ -217,7 +223,7 @@ public class ArquivoServiceImpl implements ArquivoService {
                     leitura = leitura.replaceAll("(?i)" + termos[0], termos[1]);
                 }
                 
-                script.add(leitura);
+                script.add(StringUtils.stripAccents(leitura));
             }
 
         } catch (Exception e) {
@@ -227,5 +233,6 @@ public class ArquivoServiceImpl implements ArquivoService {
         
         return script;
     }
+    
     
 }

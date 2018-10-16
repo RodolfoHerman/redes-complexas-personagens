@@ -20,6 +20,7 @@ public class Controle {
 
     private ArquivoService arquivoService;
     private Configuracoes configuracoes;
+    private Algoritmo algoritmo;
     private String PROPERTIES = "config.properties";
 
     private static final Logger log = LoggerFactory.getLogger(Controle.class);
@@ -66,13 +67,16 @@ public class Controle {
         
         log.info("Executando algoritmo.");
 
-        Algoritmo algoritmo = new Algoritmo(script, personagens);
+        algoritmo = new Algoritmo(script, personagens);
         algoritmo.realizarParse();
-        algoritmo.extrairGrafo();
+        //algoritmo.extrairGrafo();
+    }
+
+    public void salvarArquivos() {
 
         arquivoService.salvarArquivoGrafo(configuracoes.getArquivoSalvarGrafo(), algoritmo.getGrafo());
         arquivoService.salvarArquivoGrafoPython(configuracoes.getArquivoSalvarGrafoPython(), algoritmo.getGrafoPython());
-        arquivoService.salvarArquivoGephi(configuracoes.getArquivoSalvarGephi(), algoritmo.getGrafoPython(), Util.normalizarNomesPersonagens(personagens));
+        arquivoService.salvarArquivoGephi(configuracoes.getArquivoSalvarGephi(), algoritmo.getGrafoPython(), Util.normalizarNomesPersonagens(algoritmo.getPersonagens()));
     }
     
 }

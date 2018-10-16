@@ -20,7 +20,6 @@ public class Algoritmo {
     private final List<Cena> cenas;
     private int[][] grafoFinal;
 
-
     public Algoritmo(List<String> script, List<String> personagens) {
 
         this.script = script;
@@ -55,11 +54,12 @@ public class Algoritmo {
                 //contador--;
                 x = contador;
             }
-            
         }
+
+        extrairGrafo();
     }
 
-    public void extrairGrafo() {
+    private void extrairGrafo() {
         
         List<int[][]> grafos = new ArrayList<>();
         Map<String, Integer> mapa = Util.transformarListaParaMapa(personagens);
@@ -75,7 +75,7 @@ public class Algoritmo {
         this.grafoFinal = grafo.getGrafo();
     }
 
-    public Set<String> extrairPersonagens(String scriptTrecho) {
+    private Set<String> extrairPersonagens(String scriptTrecho) {
 
         Set<String> resp = new HashSet<>();
 
@@ -90,7 +90,7 @@ public class Algoritmo {
         return resp;
     }
 
-    public boolean palavraChave(String scriptTrecho) {
+    private boolean palavraChave(String scriptTrecho) {
         return Util.contemPalavra(scriptTrecho, "EXT") || Util.contemPalavra(scriptTrecho, "INT");
     }
 
@@ -100,6 +100,10 @@ public class Algoritmo {
 
     public List<String> getGrafoPython() {
         return Util.converterGrafoParaPython(this.grafoFinal, personagens);
+    }
+
+    public List<String> getPersonagens() {
+        return this.personagens;
     }
 
 }
