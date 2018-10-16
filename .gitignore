@@ -30,4 +30,4 @@ buildNumber.properties
 #
 # Grafo
 #
-grafo*?
+/grafos/*
