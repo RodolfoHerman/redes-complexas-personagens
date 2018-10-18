@@ -64,11 +64,11 @@ public class Util {
 
         for(int x = 0; x < dimensao; x++) {
             
-            String personagem_1 = personagens.get(x).replace(" ", "-").toLowerCase();
+            String personagem_1 = personagens.get(x).replace(" ", "-");
             
             for(int y = (x+1); y < dimensao; y++) {
 
-                String personagem_2 = personagens.get(y).replace(" ", "-").toLowerCase();
+                String personagem_2 = personagens.get(y).replace(" ", "-");
 
                 if(grafo[x][y] != 0) {
                     

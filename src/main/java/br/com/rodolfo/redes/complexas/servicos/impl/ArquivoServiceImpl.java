@@ -152,7 +152,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
             while((leitura = leitor.readLine()) != null ) {
 
-                script.add(StringUtils.stripAccents(leitura));
+                script.add(StringUtils.stripAccents(leitura.toLowerCase()));
             }
 
         } catch (Exception e) {
@@ -177,7 +177,7 @@ public class ArquivoServiceImpl implements ArquivoService {
 
             while((leitura = leitor.readLine()) != null ) {
 
-                personagens.add(StringUtils.stripAccents(leitura.trim().toLowerCase()));
+                personagens.add(StringUtils.stripAccents(leitura.toLowerCase()));
             }
 
         } catch (Exception e) {
@@ -231,7 +231,7 @@ public class ArquivoServiceImpl implements ArquivoService {
                     leitura = leitura.replaceAll("(?i)" + termos[0], termos[1]);
                 }
                 
-                script.add(StringUtils.stripAccents(leitura));
+                script.add(StringUtils.stripAccents(leitura.toLowerCase()));
             }
 
         } catch (Exception e) {

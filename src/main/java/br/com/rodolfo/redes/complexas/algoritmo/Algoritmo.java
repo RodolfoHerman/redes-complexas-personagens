@@ -52,7 +52,7 @@ public class Algoritmo {
 
                     } else {
 
-                        String[] trecho = scriptTrecho.split(" ");
+                        String[] trecho = scriptTrecho.trim().split(" ");
 
                         if(trecho.length <= 3) {
 
@@ -64,9 +64,8 @@ public class Algoritmo {
 
                 } while (contador < (script.size()-1) && !palavraChave(scriptTrecho));
 
-                cenas.add(new Cena(numCena, new ArrayList<>(aux)));
-                numCena++;
-                //contador--;
+                cenas.add(new Cena(numCena++, new ArrayList<>(aux)));
+
                 x = contador;
             }
         }
