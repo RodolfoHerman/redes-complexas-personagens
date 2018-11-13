@@ -74,61 +74,13 @@ public class ArquivoServiceImpl implements ArquivoService {
     }
 
     @Override
-    public void salvarArquivoGephi(String caminho, List<String> edges, List<String> listaPersonagens) {
+    public void salvarArquivoGephi(String caminho, String grafoGephi) {
 
         log.info("Slavando o grafo para GEPHI no caminho : {}", caminho);
 
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(raiz.getAbsolutePath().concat(caminho)))){
 
-            StringBuilder arquivoGephi = new StringBuilder();
-            Double contador = 0.0;
-            
-            arquivoGephi.append("<?xml version='1.0' encoding='UTF-8'?>").append("\n")
-                .append("<gexf xmlns:viz='http:///www.gexf.net/1.1draft/viz' version='1.1' xmlns='http://www.gexf.net/1.1draft'>").append("\n")
-                .append("<meta lastmodifieddate='2018-10-12+23:44'>").append("\n")
-                .append("<creator>Herman</creator>").append("\n")
-                .append("</meta>").append("\n")
-                .append("<graph defaultedgetype='undirected' idtype='string' type='static'>").append("\n")
-                .append("<nodes count='").append(listaPersonagens.size()).append("'>").append("\n");
-
-            for (String personagem : listaPersonagens) {
-                
-                arquivoGephi.append("<node id='")
-                            .append(personagem)
-                            .append("' label='")
-                            .append(personagem)
-                            .append("'/>")
-                            .append("\n");
-            }
-
-            arquivoGephi.append("</nodes>").append("\n")
-                        .append("<edges count='").append(edges.size()).append("'>").append("\n");
-            
-            for (String edge : edges) {
-                
-                String[] aux = edge.split(",");
-
-                arquivoGephi.append("<edge id='")
-                            .append(contador)
-                            .append("' source='")
-                            .append(aux[0])
-                            .append("' target='")
-                            .append(aux[1])
-                            .append("' weight='")
-                            .append(aux[2])
-                            .append("'/>")
-                            .append("\n");
-
-                contador++;
-            }
-
-            arquivoGephi.append("</edges>")
-                        .append("\n")
-                        .append("</graph>")
-                        .append("</gexf>");
-
-
-            escritor.write(arquivoGephi.toString());
+            escritor.write(grafoGephi);
             escritor.flush();
 
         } catch (Exception e) {

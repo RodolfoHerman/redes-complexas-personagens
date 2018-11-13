@@ -81,6 +81,59 @@ public class Util {
         return grafoPython;
     }
 
+    public static String converterGrafoPythonParaGephi(List<String> grafoPython, List<String> listaPersonagens) {
+        
+        StringBuilder arquivoGephi = new StringBuilder();
+        Double contador = 0.0;
+
+        arquivoGephi.append("<?xml version='1.0' encoding='UTF-8'?>").append("\n")
+                .append("<gexf xmlns:viz='http:///www.gexf.net/1.1draft/viz' version='1.1' xmlns='http://www.gexf.net/1.1draft'>").append("\n")
+                .append("<meta lastmodifieddate='2018-10-12+23:44'>").append("\n")
+                .append("<creator>Herman</creator>").append("\n")
+                .append("</meta>").append("\n")
+                .append("<graph defaultedgetype='undirected' idtype='string' type='static'>").append("\n")
+                .append("<nodes count='").append(listaPersonagens.size()).append("'>").append("\n");
+
+            for (String personagem : listaPersonagens) {
+                
+                arquivoGephi.append("<node id='")
+                            .append(personagem)
+                            .append("' label='")
+                            .append(personagem)
+                            .append("'/>")
+                            .append("\n");
+            }
+
+            arquivoGephi.append("</nodes>").append("\n")
+                        .append("<edges count='").append(grafoPython.size()).append("'>").append("\n");
+            
+            for (String edge : grafoPython) {
+                
+                String[] aux = edge.split(",");
+
+                arquivoGephi.append("<edge id='")
+                            .append(contador)
+                            .append("' source='")
+                            .append(aux[0])
+                            .append("' target='")
+                            .append(aux[1])
+                            .append("' weight='")
+                            .append(aux[2])
+                            .append("'/>")
+                            .append("\n");
+
+                contador++;
+            }
+
+            arquivoGephi.append("</edges>")
+                        .append("\n")
+                        .append("</graph>")
+                        .append("</gexf>");
+
+
+        return arquivoGephi.toString();
+    }
+
     private Util() {}
 
 }

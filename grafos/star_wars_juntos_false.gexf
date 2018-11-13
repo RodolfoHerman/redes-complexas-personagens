@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns:viz='http:///www.gexf.net/1.1draft/viz' version='1.1' xmlns='http://www.gexf.net/1.1draft'>
+<meta lastmodifieddate='2018-10-12+23:44'>
+<creator>Herman</creator>
+</meta>
+<graph defaultedgetype='undirected' idtype='string' type='static'>
+<nodes count='72'>
+<node id='ackbar' label='ackbar'/>
+<node id='assistant-officer' label='assistant-officer'/>
+<node id='aunt-beru' label='aunt-beru'/>
+<node id='bib' label='bib'/>
+<node id='biggs' label='biggs'/>
+<node id='boushh' label='boushh'/>
+<node id='c-3po' label='c-3po'/>
+<node id='calamari' label='calamari'/>
+<node id='chewbacca' label='chewbacca'/>
+<node id='chirpa' label='chirpa'/>
+<node id='darth-vader' label='darth-vader'/>
+<node id='deck-officer' label='deck-officer'/>
+<node id='dengar' label='dengar'/>
+<node id='derlin' label='derlin'/>
+<node id='dodonna' label='dodonna'/>
+<node id='emperor' label='emperor'/>
+<node id='ev-9d9' label='ev-9d9'/>
+<node id='ewok' label='ewok'/>
+<node id='fixer' label='fixer'/>
+<node id='gold-five' label='gold-five'/>
+<node id='gold-leader' label='gold-leader'/>
+<node id='gold-two' label='gold-two'/>
+<node id='greedo' label='greedo'/>
+<node id='han-solo' label='han-solo'/>
+<node id='hobbie' label='hobbie'/>
+<node id='ig-88' label='ig-88'/>
+<node id='imperial-officer' label='imperial-officer'/>
+<node id='jabba' label='jabba'/>
+<node id='janson' label='janson'/>
+<node id='jawa' label='jawa'/>
+<node id='lando-calrissian' label='lando-calrissian'/>
+<node id='leia' label='leia'/>
+<node id='lieutenant' label='lieutenant'/>
+<node id='logray' label='logray'/>
+<node id='luke' label='luke'/>
+<node id='madine' label='madine'/>
+<node id='moff-jerjerrod' label='moff-jerjerrod'/>
+<node id='mothma' label='mothma'/>
+<node id='motti' label='motti'/>
+<node id='needa' label='needa'/>
+<node id='nien-nunb' label='nien-nunb'/>
+<node id='obi-wan' label='obi-wan'/>
+<node id='oola' label='oola'/>
+<node id='owen' label='owen'/>
+<node id='ozzel' label='ozzel'/>
+<node id='paploo' label='paploo'/>
+<node id='piett' label='piett'/>
+<node id='porkins' label='porkins'/>
+<node id='r2-d2' label='r2-d2'/>
+<node id='rancor' label='rancor'/>
+<node id='rebel-officer' label='rebel-officer'/>
+<node id='rebel-pilot' label='rebel-pilot'/>
+<node id='red-leader' label='red-leader'/>
+<node id='red-six' label='red-six'/>
+<node id='red-three' label='red-three'/>
+<node id='red-two' label='red-two'/>
+<node id='rieekan' label='rieekan'/>
+<node id='salacious' label='salacious'/>
+<node id='stormtrooper' label='stormtrooper'/>
+<node id='tagge' label='tagge'/>
+<node id='tarkin' label='tarkin'/>
+<node id='teebo' label='teebo'/>
+<node id='tusken-raider' label='tusken-raider'/>
+<node id='ugnaught' label='ugnaught'/>
+<node id='veers' label='veers'/>
+<node id='wampa' label='wampa'/>
+<node id='wedge' label='wedge'/>
+<node id='wicket' label='wicket'/>
+<node id='willard' label='willard'/>
+<node id='yoda' label='yoda'/>
+<node id='zev' label='zev'/>
+<node id='zuckuss' label='zuckuss'/>
+</nodes>
+<edges count='181'>
+<edge id='0.0' source='ackbar' target='c-3po' weight='1'/>
+<edge id='1.0' source='ackbar' target='gold-leader' weight='1'/>
+<edge id='2.0' source='ackbar' target='leia' weight='1'/>
+<edge id='3.0' source='ackbar' target='luke' weight='1'/>
+<edge id='4.0' source='ackbar' target='madine' weight='1'/>
+<edge id='5.0' source='ackbar' target='mothma' weight='1'/>
+<edge id='6.0' source='ackbar' target='rebel-pilot' weight='2'/>
+<edge id='7.0' source='ackbar' target='wedge' weight='1'/>
+<edge id='8.0' source='assistant-officer' target='deck-officer' weight='1'/>
+<edge id='9.0' source='assistant-officer' target='luke' weight='1'/>
+<edge id='10.0' source='aunt-beru' target='biggs' weight='1'/>
+<edge id='11.0' source='aunt-beru' target='c-3po' weight='1'/>
+<edge id='12.0' source='aunt-beru' target='leia' weight='1'/>
+<edge id='13.0' source='aunt-beru' target='luke' weight='3'/>
+<edge id='14.0' source='aunt-beru' target='obi-wan' weight='2'/>
+<edge id='15.0' source='aunt-beru' target='owen' weight='3'/>
+<edge id='16.0' source='aunt-beru' target='r2-d2' weight='1'/>
+<edge id='17.0' source='bib' target='c-3po' weight='2'/>
+<edge id='18.0' source='bib' target='jabba' weight='3'/>
+<edge id='19.0' source='bib' target='luke' weight='2'/>
+<edge id='20.0' source='bib' target='r2-d2' weight='1'/>
+<edge id='21.0' source='biggs' target='c-3po' weight='1'/>
+<edge id='22.0' source='biggs' target='fixer' weight='2'/>
+<edge id='23.0' source='biggs' target='gold-leader' weight='1'/>
+<edge id='24.0' source='biggs' target='leia' weight='1'/>
+<edge id='25.0' source='biggs' target='luke' weight='8'/>
+<edge id='26.0' source='biggs' target='obi-wan' weight='2'/>
+<edge id='27.0' source='biggs' target='owen' weight='2'/>
+<edge id='28.0' source='biggs' target='r2-d2' weight='1'/>
+<edge id='29.0' source='biggs' target='red-leader' weight='4'/>
+<edge id='30.0' source='biggs' target='red-three' weight='2'/>
+<edge id='31.0' source='biggs' target='wedge' weight='3'/>
+<edge id='32.0' source='boushh' target='c-3po' weight='2'/>
+<edge id='33.0' source='boushh' target='chewbacca' weight='1'/>
+<edge id='34.0' source='boushh' target='jabba' weight='2'/>
+<edge id='35.0' source='boushh' target='leia' weight='1'/>
+<edge id='36.0' source='boushh' target='oola' weight='1'/>
+<edge id='37.0' source='c-3po' target='chewbacca' weight='5'/>
+<edge id='38.0' source='c-3po' target='darth-vader' weight='2'/>
+<edge id='39.0' source='c-3po' target='deck-officer' weight='1'/>
+<edge id='40.0' source='c-3po' target='derlin' weight='1'/>
+<edge id='41.0' source='c-3po' target='han-solo' weight='2'/>
+<edge id='42.0' source='c-3po' target='imperial-officer' weight='1'/>
+<edge id='43.0' source='c-3po' target='jabba' weight='6'/>
+<edge id='44.0' source='c-3po' target='jawa' weight='1'/>
+<edge id='45.0' source='c-3po' target='lando-calrissian' weight='3'/>
+<edge id='46.0' source='c-3po' target='leia' weight='52'/>
+<edge id='47.0' source='c-3po' target='lieutenant' weight='1'/>
+<edge id='48.0' source='c-3po' target='luke' weight='42'/>
+<edge id='49.0' source='c-3po' target='madine' weight='1'/>
+<edge id='50.0' source='c-3po' target='mothma' weight='1'/>
+<edge id='51.0' source='c-3po' target='obi-wan' weight='11'/>
+<edge id='52.0' source='c-3po' target='oola' weight='1'/>
+<edge id='53.0' source='c-3po' target='owen' weight='3'/>
+<edge id='54.0' source='c-3po' target='r2-d2' weight='38'/>
+<edge id='55.0' source='c-3po' target='rancor' weight='1'/>
+<edge id='56.0' source='c-3po' target='red-leader' weight='2'/>
+<edge id='57.0' source='c-3po' target='rieekan' weight='2'/>
+<edge id='58.0' source='c-3po' target='stormtrooper' weight='2'/>
+<edge id='59.0' source='c-3po' target='wedge' weight='1'/>
+<edge id='60.0' source='c-3po' target='wicket' weight='1'/>
+<edge id='61.0' source='chewbacca' target='darth-vader' weight='1'/>
+<edge id='62.0' source='chewbacca' target='imperial-officer' weight='1'/>
+<edge id='63.0' source='chewbacca' target='jabba' weight='1'/>
+<edge id='64.0' source='chewbacca' target='leia' weight='2'/>
+<edge id='65.0' source='chewbacca' target='luke' weight='4'/>
+<edge id='66.0' source='chewbacca' target='obi-wan' weight='3'/>
+<edge id='67.0' source='chewbacca' target='oola' weight='1'/>
+<edge id='68.0' source='chewbacca' target='r2-d2' weight='1'/>
+<edge id='69.0' source='darth-vader' target='emperor' weight='13'/>
+<edge id='70.0' source='darth-vader' target='imperial-officer' weight='3'/>
+<edge id='71.0' source='darth-vader' target='leia' weight='6'/>
+<edge id='72.0' source='darth-vader' target='luke' weight='20'/>
+<edge id='73.0' source='darth-vader' target='motti' weight='1'/>
+<edge id='74.0' source='darth-vader' target='needa' weight='3'/>
+<edge id='75.0' source='darth-vader' target='obi-wan' weight='5'/>
+<edge id='76.0' source='darth-vader' target='ozzel' weight='2'/>
+<edge id='77.0' source='darth-vader' target='piett' weight='8'/>
+<edge id='78.0' source='darth-vader' target='rebel-officer' weight='1'/>
+<edge id='79.0' source='darth-vader' target='tagge' weight='1'/>
+<edge id='80.0' source='darth-vader' target='tarkin' weight='6'/>
+<edge id='81.0' source='darth-vader' target='veers' weight='2'/>
+<edge id='82.0' source='darth-vader' target='yoda' weight='1'/>
+<edge id='83.0' source='deck-officer' target='leia' weight='1'/>
+<edge id='84.0' source='deck-officer' target='luke' weight='2'/>
+<edge id='85.0' source='derlin' target='hobbie' weight='1'/>
+<edge id='86.0' source='derlin' target='leia' weight='1'/>
+<edge id='87.0' source='derlin' target='lieutenant' weight='1'/>
+<edge id='88.0' source='derlin' target='luke' weight='1'/>
+<edge id='89.0' source='dodonna' target='gold-leader' weight='1'/>
+<edge id='90.0' source='dodonna' target='leia' weight='1'/>
+<edge id='91.0' source='dodonna' target='luke' weight='1'/>
+<edge id='92.0' source='dodonna' target='wedge' weight='1'/>
+<edge id='93.0' source='emperor' target='luke' weight='8'/>
+<edge id='94.0' source='emperor' target='motti' weight='1'/>
+<edge id='95.0' source='emperor' target='needa' weight='1'/>
+<edge id='96.0' source='emperor' target='obi-wan' weight='2'/>
+<edge id='97.0' source='emperor' target='piett' weight='1'/>
+<edge id='98.0' source='emperor' target='tagge' weight='1'/>
+<edge id='99.0' source='emperor' target='tarkin' weight='1'/>
+<edge id='100.0' source='fixer' target='luke' weight='2'/>
+<edge id='101.0' source='gold-five' target='red-leader' weight='2'/>
+<edge id='102.0' source='gold-leader' target='leia' weight='1'/>
+<edge id='103.0' source='gold-leader' target='luke' weight='1'/>
+<edge id='104.0' source='gold-leader' target='rebel-pilot' weight='2'/>
+<edge id='105.0' source='gold-leader' target='red-leader' weight='3'/>
+<edge id='106.0' source='gold-leader' target='red-two' weight='1'/>
+<edge id='107.0' source='gold-leader' target='wedge' weight='5'/>
+<edge id='108.0' source='han-solo' target='jabba' weight='1'/>
+<edge id='109.0' source='han-solo' target='luke' weight='3'/>
+<edge id='110.0' source='han-solo' target='obi-wan' weight='2'/>
+<edge id='111.0' source='han-solo' target='r2-d2' weight='2'/>
+<edge id='112.0' source='hobbie' target='leia' weight='1'/>
+<edge id='113.0' source='hobbie' target='luke' weight='2'/>
+<edge id='114.0' source='imperial-officer' target='leia' weight='1'/>
+<edge id='115.0' source='imperial-officer' target='luke' weight='1'/>
+<edge id='116.0' source='imperial-officer' target='rebel-officer' weight='1'/>
+<edge id='117.0' source='imperial-officer' target='tarkin' weight='1'/>
+<edge id='118.0' source='jabba' target='leia' weight='2'/>
+<edge id='119.0' source='jabba' target='luke' weight='4'/>
+<edge id='120.0' source='jabba' target='oola' weight='1'/>
+<edge id='121.0' source='jabba' target='r2-d2' weight='2'/>
+<edge id='122.0' source='janson' target='wedge' weight='3'/>
+<edge id='123.0' source='jawa' target='luke' weight='1'/>
+<edge id='124.0' source='jawa' target='owen' weight='1'/>
+<edge id='125.0' source='jawa' target='r2-d2' weight='1'/>
+<edge id='126.0' source='lando-calrissian' target='leia' weight='3'/>
+<edge id='127.0' source='leia' target='luke' weight='41'/>
+<edge id='128.0' source='leia' target='madine' weight='1'/>
+<edge id='129.0' source='leia' target='mothma' weight='1'/>
+<edge id='130.0' source='leia' target='motti' weight='1'/>
+<edge id='131.0' source='leia' target='obi-wan' weight='8'/>
+<edge id='132.0' source='leia' target='r2-d2' weight='9'/>
+<edge id='133.0' source='leia' target='red-leader' weight='1'/>
+<edge id='134.0' source='leia' target='rieekan' weight='5'/>
+<edge id='135.0' source='leia' target='stormtrooper' weight='3'/>
+<edge id='136.0' source='leia' target='tarkin' weight='1'/>
+<edge id='137.0' source='leia' target='wedge' weight='1'/>
+<edge id='138.0' source='leia' target='wicket' weight='1'/>
+<edge id='139.0' source='leia' target='willard' weight='1'/>
+<edge id='140.0' source='leia' target='yoda' weight='3'/>
+<edge id='141.0' source='lieutenant' target='luke' weight='1'/>
+<edge id='142.0' source='luke' target='madine' weight='1'/>
+<edge id='143.0' source='luke' target='mothma' weight='1'/>
+<edge id='144.0' source='luke' target='obi-wan' weight='36'/>
+<edge id='145.0' source='luke' target='owen' weight='6'/>
+<edge id='146.0' source='luke' target='r2-d2' weight='24'/>
+<edge id='147.0' source='luke' target='red-leader' weight='7'/>
+<edge id='148.0' source='luke' target='red-six' weight='1'/>
+<edge id='149.0' source='luke' target='rieekan' weight='3'/>
+<edge id='150.0' source='luke' target='stormtrooper' weight='1'/>
+<edge id='151.0' source='luke' target='wedge' weight='7'/>
+<edge id='152.0' source='luke' target='yoda' weight='9'/>
+<edge id='153.0' source='luke' target='zev' weight='2'/>
+<edge id='154.0' source='madine' target='mothma' weight='1'/>
+<edge id='155.0' source='motti' target='tagge' weight='1'/>
+<edge id='156.0' source='motti' target='tarkin' weight='2'/>
+<edge id='157.0' source='needa' target='piett' weight='2'/>
+<edge id='158.0' source='obi-wan' target='owen' weight='2'/>
+<edge id='159.0' source='obi-wan' target='r2-d2' weight='10'/>
+<edge id='160.0' source='obi-wan' target='red-leader' weight='1'/>
+<edge id='161.0' source='obi-wan' target='yoda' weight='5'/>
+<edge id='162.0' source='owen' target='r2-d2' weight='2'/>
+<edge id='163.0' source='ozzel' target='piett' weight='2'/>
+<edge id='164.0' source='ozzel' target='veers' weight='2'/>
+<edge id='165.0' source='piett' target='veers' weight='2'/>
+<edge id='166.0' source='porkins' target='red-six' weight='1'/>
+<edge id='167.0' source='r2-d2' target='red-leader' weight='1'/>
+<edge id='168.0' source='r2-d2' target='rieekan' weight='1'/>
+<edge id='169.0' source='r2-d2' target='stormtrooper' weight='1'/>
+<edge id='170.0' source='r2-d2' target='yoda' weight='2'/>
+<edge id='171.0' source='rebel-pilot' target='red-two' weight='1'/>
+<edge id='172.0' source='rebel-pilot' target='wedge' weight='2'/>
+<edge id='173.0' source='red-leader' target='red-six' weight='1'/>
+<edge id='174.0' source='red-leader' target='red-three' weight='1'/>
+<edge id='175.0' source='red-leader' target='red-two' weight='1'/>
+<edge id='176.0' source='red-leader' target='wedge' weight='5'/>
+<edge id='177.0' source='red-three' target='red-two' weight='1'/>
+<edge id='178.0' source='red-three' target='wedge' weight='2'/>
+<edge id='179.0' source='red-two' target='wedge' weight='4'/>
+<edge id='180.0' source='tagge' target='tarkin' weight='1'/>
+</edges>
+</graph></gexf>

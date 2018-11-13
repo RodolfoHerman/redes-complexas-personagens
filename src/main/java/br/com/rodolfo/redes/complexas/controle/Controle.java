@@ -82,7 +82,7 @@ public class Controle {
 
         arquivoService.salvarArquivoGrafo(configuracoes.getArquivoSalvarGrafo(), algoritmo.getGrafo());
         arquivoService.salvarArquivoGrafoPython(configuracoes.getArquivoSalvarGrafoPython(), algoritmo.getGrafoPython());
-        arquivoService.salvarArquivoGephi(configuracoes.getArquivoSalvarGephi(), algoritmo.getGrafoPython(), Util.normalizarNomesPersonagens(algoritmo.getPersonagens()));
+        arquivoService.salvarArquivoGephi(configuracoes.getArquivoSalvarGephi(), Util.converterGrafoPythonParaGephi(algoritmo.getGrafoPython(), Util.normalizarNomesPersonagens(algoritmo.getPersonagens())));
     }
     
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
+
 import br.com.rodolfo.redes.complexas.modelos.Cena;
 import br.com.rodolfo.redes.complexas.modelos.Grafo;
 import br.com.rodolfo.redes.complexas.util.Util;
@@ -52,9 +54,13 @@ public class Algoritmo {
 
                     } else {
 
+                        //Por ser script bem estruturado, quando é linha de nome do personagem podem conter até 5 palavras
                         String[] trecho = scriptTrecho.trim().split(" ");
+                        //Por ser script bem estruturado, quando é linha de nome pode começar com 20 até 23 espaços
+                        int ocorrencia  = StringUtils.countMatches(scriptTrecho, " ");
 
-                        if(trecho.length <= 3) {
+                        // if(trecho.length <= 5 && ocorrencia >= 20) {
+                        if(trecho.length <= 5) {
 
                             aux.addAll(extrairPersonagens(scriptTrecho));
                         }
